@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('image', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('image');
             $table->unsignedInteger('product_id');
             $table->foreign('product_id')->references('id')->on('product');

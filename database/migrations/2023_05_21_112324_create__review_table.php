@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('_review', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->integer('rating_value');
             $table->text('review_text')->nullable();
             $table->unsignedInteger('product_id');
