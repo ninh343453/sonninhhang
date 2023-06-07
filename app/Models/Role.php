@@ -13,7 +13,7 @@ class Role extends Model
     protected $primaryKey = 'id';
     public $timestamps = false;
     public function users(){
-        return $this->hasMany('App\Models\User');
+        return $this->hasMany('App\Models\Users');
     }
     
 }
