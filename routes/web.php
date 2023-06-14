@@ -16,8 +16,8 @@ use App\Http\Controllers\ProductController;
 |ch
 */
 
-Route::get('/test', function () {
-    return view('admin.layout.index');
+Route::get('/home', function () {
+    return view('client.layout.index');
 });
 
 //edit profile
