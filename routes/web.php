@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Account;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ControllerPublisher;
 
 
 /*
@@ -16,9 +17,7 @@ use App\Http\Controllers\ProductController;
 |ch
 */
 
-Route::get('/home', function () {
-    return view('client.layout.index');
-});
+
 
 //edit profile
 Route::get('/profile/edit',[Account::class, 'edit'] )->name('profile.edit');
@@ -33,9 +32,6 @@ Route::post('/game/update{id}', [ProductController::class, 'update'])->name('pro
 Route::get('/game/show{id}', [ProductController::class, 'show'])->name('product.show');
 Route::post('/game/store', [ProductController::class, 'store'])->name('product.store');
 Route::get('/game/home', [ProductController::class, 'home'])->name('product.home');
-Route::get('/', function () {
-    return view('clien.layout.index');
-});
 
 Route::get('/add-to-cart/{id}', [HomeController::class, 'addToCart']);
 Route::get('/cart', [HomeController::class, 'cart'])->name('pages.cart');
@@ -54,3 +50,11 @@ Route::get('/', [Account::class, 'showLogin'])->name('welcome.login');
 Route::get('/logout', [Account::class, 'logout'])->name('logout');
 Route::post('/index', [Account::class, 'login'])->name('auth.login');
 
+
+Route::get('/publisher/index', [ControllerPublisher::class, 'index'])->name('publisher.index');
+Route::get('/publisher/create', [ControllerPublisher::class, 'create'])->name('publisher.create');
+Route::get('/publisher:delete{id}', [ControllerPublisher::class, 'destroy'])->name('publisher.destroy');
+Route::get('/publisher/edit{id}', [ControllerPublisher::class, 'edit'])->name('publisher.edit');
+Route::post('/publisher/update{id}', [ControllerPublisher::class, 'update'])->name('publisher.update');
+Route::get('/publisher/show{id}', [ControllerPublisher::class, 'show'])->name('publisher.show');
+Route::post('/publisher/store', [ControllerPublisher::class, 'store'])->name('publisher.store');
