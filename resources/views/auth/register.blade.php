@@ -249,41 +249,49 @@
 
                                     <input type="text" class="form-control" placeholder="Full Name" value=""
                                         name="name" />
-
+                                        @if ($errors->has('name'))
+                                        {{ $errors->first('name') }}
+                                    @endif
                                 </div>
+                                
                                 <div class="form-group">
 
                                     <input type="text" class="form-control" placeholder="Country" value=""
                                         name="country" />
 
+                                        @if ($errors->has('country'))
+                                        {{ $errors->first('country') }}
+                                @endif
                                 </div>
                                 <div class="form-group">
 
                                     <input type="text" class="form-control" placeholder="Phone number" value=""
                                         name="numberphone" />
-
+                                        @if ($errors->has('numberphone'))
+                                        {{ $errors->first('numberphone') }}
+                                @endif
                                 </div>
                                 <div class="form-group">
 
                                     <input type="email" class="form-control" placeholder="Your Email *" value=""
                                         name="email" />
-
+                                        @if ($errors->has('email'))
+                                        {{ $errors->first('email') }}
+                                    @endif
                                 </div>
 
-                                @if ($errors->has('email'))
-                                    {{ $errors->first('email') }}
-                                @endif
+                               
 
                                 <div class="form-group">
 
                                     <input type="password" class="form-control" placeholder="Password *" value=""
                                         name="password" />
 
+                                        @if ($errors->has('password'))
+                                        {{ $errors->first('password') }}
+                                    @endif
                                 </div>
 
-                                @if ($errors->has('password'))
-                                    {{ $errors->first('password') }}
-                                @endif
 
                                 <div class="form-group">
 
@@ -294,17 +302,10 @@
 
                                 
 
-                                @if ($errors->has('name'))
-                                    {{ $errors->first('name') }}
-                                @endif
+                              
 
-                                @if ($errors->has('country'))
-                                        {{ $errors->first('country') }}
-                                @endif
 
-                                @if ($errors->has('numberphone'))
-                                        {{ $errors->first('numberphone') }}
-                                @endif
+                              
 
 
 

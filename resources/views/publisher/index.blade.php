@@ -31,6 +31,9 @@
         </tr>
 
         @foreach ($publishers as $key => $publisher)
+        <div class="pull-left">
+            <a class="btn btn-success" href="{{ route('publisher.create') }}"> Add New Game</a>
+        </div>
             <tr>
 
                 <td>{{ $key + 1 }}</td>
