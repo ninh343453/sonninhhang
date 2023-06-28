@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Account;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ControllerPublisher;
 
 
@@ -20,8 +21,7 @@ use App\Http\Controllers\ControllerPublisher;
 
 
 //edit profile
-Route::get('/profile/edit',[Account::class, 'edit'] )->name('profile.edit');
-Route::post('/profile/update', [Account::class, 'update'])->name('profile.update');
+
 
 
 Route::get('/game/index', [ProductController::class, 'index'])->name('product.index');
@@ -39,10 +39,6 @@ Route::post('/update-cart/{id}', [HomeController::class, 'update'])->name('updat
 Route::delete('/remove-from-cart/{id}', [HomeController::class, 'remove']);
 
 //fogot password
-Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
-Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post'); 
-Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
-Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
 Route::post('/account/login', [Account::class, 'store'])->name('auth.register');
 Route::get('/register', [Account::class, 'show'])->name('welcome.register');
@@ -63,3 +59,11 @@ Route::get('/publisher/edit{id}', [ControllerPublisher::class, 'edit'])->name('p
 Route::post('/publisher/update{id}', [ControllerPublisher::class, 'update'])->name('publisher.update');
 Route::get('/publisher/show{id}', [ControllerPublisher::class, 'show'])->name('publisher.show');
 Route::post('/publisher/store', [ControllerPublisher::class, 'store'])->name('publisher.store');
+
+
+Route::get('/profile/dashboard',[ProfileController::class, 'dashboard'])->name('dashboard');
+Route::get('/profile/edit', [ProfileController::class, 'edit_profile'])->name('edit_profile');
+Route::put('/profile/update', [ProfileController::class, 'update_profile'])->name('update_profile');
+
+Route::get('/profile/change-password', [ProfileController::class, 'change_password'])->name('change_password');
+Route::post('/profile/update-password', [ProfileController::class, 'update_password'])->name('update_password');    

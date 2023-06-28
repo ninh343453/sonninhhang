@@ -174,8 +174,6 @@ class Account extends Controller
                 $user->password = Hash::make($request->password);
                 $user->role_id = $request->role;
                 $user->save();
-
-                $user->save();
                 return redirect()->route('product.index')
                     ->with('success', 'Account updated successfully');
             } else {

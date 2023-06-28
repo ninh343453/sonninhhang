@@ -1,3 +1,4 @@
+
 <form method="POST" action="{{ route('users.update', $user->id) }}">
     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
     <input type="hidden" name="_method" value="PUT" />

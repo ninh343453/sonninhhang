@@ -15,7 +15,7 @@
                 height="30px" style="padding: 0px">
             </div>
             <div class="info">
-                <a href="#" class="d-block">
+                <a href="{{ route('dashboard') }}" class="d-block">
                     @if (session('user'))
                         <p>{{ session('user')->name }}</p>
                     @endif
@@ -96,7 +96,7 @@
                         <li class="nav-item">
                             <a href="pages/layout/fixed-sidebar.html" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Fixed Sidebar</p>
+                                <p></p>
                             </a>
                         </li>
                         <li class="nav-item">
