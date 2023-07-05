@@ -130,6 +130,7 @@ class ProductController extends Controller
                 $Product_Images=[];
                 $images =$request->file('image');
                 foreach($images as $image){
+                    
                     $path =public_path('image/product');
                     $image_name =time().'_'.$image->getClientOriginalName();
                     $image->move($path,$image_name);
@@ -138,9 +139,8 @@ class ProductController extends Controller
             } else {
                 $image_name = 'noname.jpg';
             }
-           
-
             $product = Product::find($id);
+            
             if ($product != null) {
                 $product->name = $request->name;
                 $product->price = $request->price;
@@ -148,11 +148,10 @@ class ProductController extends Controller
                 $product->publisher_id = $request->publisher;
               
                 $product->save();
-                $lastInserttedID =$product->id;
                 foreach ($Product_Images as $image) {
-                    $productImage =new Image(); 
-                    $productImage->image=$image;
-                    $productImage->product_id=$lastInserttedID;
+                    $productImage = new Image();
+                    $productImage->image = $image;
+                    $productImage->product_id = $product->id;
                     $productImage->save();
                 }
     
@@ -166,11 +165,10 @@ class ProductController extends Controller
 
         }
     }
+
     public function destroy($id)
     {
         $product = Product::find($id);
-
-        
 
         $product->delete();
 

@@ -94,7 +94,7 @@
                                     <select name="publisher" class="form-control">
 
                                         @foreach ($publishers as $publisher)
-                                            <option value="{{ $publisher->id }}">{{ $publisher->country }}</option>
+                                            <option value="{{ $publisher->id }}">{{ $publisher->name }}</option>
                                         @endforeach
 
                                     </select>

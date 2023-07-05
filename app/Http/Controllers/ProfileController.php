@@ -60,7 +60,7 @@ class ProfileController extends Controller
 
     public function update_password(Request $request){
         $request->validate([
-            'old_password'=>'required|min:6|max:100',
+        'old_password'=>'required|min:6|max:100',
         'new_password'=>'required|min:6|max:100',
         'confirm_password'=>'required|same:new_password'
         ]);
@@ -73,7 +73,7 @@ class ProfileController extends Controller
                 'password'=>bcrypt($request->new_password)
             ]);
             $current_user->save();
-            return redirect()->route('dashboard')
+            return redirect()->route('logout')
                 ->with('success', 'Password updated successfully');
         } else {
             return redirect()->route('change_password')

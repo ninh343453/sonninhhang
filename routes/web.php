@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Account;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ControllerPublisher;
+use App\Http\Controllers\CartProductController;
 
 
 /*
@@ -33,10 +35,7 @@ Route::get('/game/show{id}', [ProductController::class, 'show'])->name('product.
 Route::post('/game/store', [ProductController::class, 'store'])->name('product.store');
 Route::get('/game/home', [ProductController::class, 'home'])->name('product.home');
 
-Route::get('/add-to-cart/{id}', [HomeController::class, 'addToCart']);
-Route::get('/cart', [HomeController::class, 'cart'])->name('pages.cart');
-Route::post('/update-cart/{id}', [HomeController::class, 'update'])->name('update-cart');
-Route::delete('/remove-from-cart/{id}', [HomeController::class, 'remove']);
+
 
 //fogot password
 
@@ -67,3 +66,27 @@ Route::put('/profile/update', [ProfileController::class, 'update_profile'])->nam
 
 Route::get('/profile/change-password', [ProfileController::class, 'change_password'])->name('change_password');
 Route::post('/profile/update-password', [ProfileController::class, 'update_password'])->name('update_password');    
+
+//category
+
+Route::get('/category/index', [CategoryController::class, 'index'])->name('category.index');
+Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
+Route::get('/category:delete{id}', [CategoryController::class, 'destroy'])->name('category.destroy');
+Route::get('/category/edit{id}', [CategoryController::class, 'edit'])->name('category.edit');
+Route::post('/category/update{id}', [CategoryController::class, 'update'])->name('category.update');
+Route::get('/category/show{id}', [CategoryController::class, 'show'])->name('category.show');
+Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
+
+// //test
+// Route ::get('/test/index',function(){
+//     return view('listproduct.index');
+// });
+
+
+
+
+// cart
+Route::get('cart', [CartProductController::class, 'cart'])->name('cart');
+Route::get('add-to-cart/{id}', [CartProductController::class, 'addToCart'])->name('add_to_cart');
+Route::patch('update-cart', [CartProductController::class, 'update'])->name('update_cart');
+Route::delete('remove-from-cart', [CartProductController::class, 'remove'])->name('remove_from_cart'); 
