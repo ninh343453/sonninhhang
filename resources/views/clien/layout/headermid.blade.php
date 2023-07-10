@@ -72,8 +72,8 @@
 
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-
-                        <div class="dropdown-divider"></div>
+                        
+                 
                         <a href="{{ route('dashboard') }}" class="dropdown-item">
                             <i class="fa fa-user" aria-hidden="true"></i> MyProfile
                         </a>

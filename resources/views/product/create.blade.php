@@ -128,10 +128,21 @@
 
 
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-
-
-
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <label>Categories:</label>
+                            @foreach ($categories as $category)
+                                <div>
+                                    <input type="checkbox" name="categories[]" id="category_{{ $category->id }}"
+                                        value="{{ $category->id }}">
+                                    <label for="category_{{ $category->id }}">{{ $category->name }}</label>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
