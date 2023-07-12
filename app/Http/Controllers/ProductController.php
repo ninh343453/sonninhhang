@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\File;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Image;
@@ -27,6 +26,10 @@ class ProductController extends Controller
         $products = Product::latest()->paginate(20);
         return view('product.index', compact('products'))
             ->with('i', (request()->input('page', 1) - 1) * 20);
+    }
+    public function admin()
+    {
+        return view('admin.home');
     }
     public function create()
     {
@@ -126,8 +129,6 @@ class ProductController extends Controller
                 return redirect()->back()
                     ->withErrors($validator)
                     ->withInput();
-
-
             }
 
             if ($request->hasfile('image')) {
@@ -143,7 +144,6 @@ class ProductController extends Controller
             } else {
                 $Product_Images[] = 'noname.jpg';
             }
-
 
             $product = Product::find($id);
             if ($product != null) {
@@ -172,7 +172,6 @@ class ProductController extends Controller
                     ->with('Error', 'Game not update');
 
             }
-
         }
     }
 

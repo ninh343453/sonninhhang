@@ -16,7 +16,7 @@
         </div>
     @endif
     <div class="pull-left">
-        <a class="btn btn-success" href="{{ route('category.create') }}"> Add New Game</a>
+        <a class="btn btn-success" href="{{ route('category.create') }}"> Add New Category</a>
     </div>
     <table class="table table-bordered">
 

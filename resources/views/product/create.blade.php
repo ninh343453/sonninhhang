@@ -92,9 +92,12 @@
                 <div class="form-group">
 
                     <strong>Publisher:</strong>
-
+                    <div class="d-flex justify-content-center links">
+                        <a href="{{ route('publisher.create') }}">add new publisher</a>
+                    </div>
                     <select name="publisher" class="form-control">
-
+                        
+                        
                         @foreach ($publishers as $publisher)
                             <option value="{{ $publisher->id }}">{{ $publisher->name }}</option>
                         @endforeach
@@ -133,6 +136,10 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <label>Categories:</label>
+                            <div class="d-flex justify-content-center links">
+                                <a href="{{ route('category.create') }}">add new category</a>
+                            </div>
+                            
                             @foreach ($categories as $category)
                                 <div>
                                     <input type="checkbox" name="categories[]" id="category_{{ $category->id }}"
