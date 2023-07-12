@@ -22,5 +22,37 @@
             display: inline-block;
             margin-right: 10px;
         }
+
+        <>.pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .pagination a,
+        .pagination span {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #f2f2f2;
+            border-radius: 4px;
+            margin: 0 5px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .pagination a:hover {
+            background-color: #ddd;
+        }
+
+        .pagination .active {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .pagination .disabled {
+            pointer-events: none;
+            opacity: 0.6;
+        }
     </style>
 </head>

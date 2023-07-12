@@ -73,4 +73,4 @@ Route::patch('update-cart', [CartProductController::class, 'update'])->name('upd
 Route::delete('remove-from-cart', [CartProductController::class, 'remove'])->name('remove_from_cart'); 
 
 Route::get('/game/detail{id}', [HomeController::class, 'show'])->name('home.show');
-
+Route::get('/search', [HomeController::class, 'search'])->name('pages.search');

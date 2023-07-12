@@ -16,7 +16,7 @@
         <div class="header-center">
             <div class="header-search header-search-extended header-search-visible d-none d-lg-block">
                 <a href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
-                <form action="#" method="get">
+                <form action="{{ route('pages.search') }}" method="get">
                     <div class="header-search-wrapper search-wrapper-wide">
                         <label for="query" class="sr-only">Search</label>
                         <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
@@ -91,6 +91,7 @@
 
                         </a>
                     </div>
+                    
             </div>
 
 
