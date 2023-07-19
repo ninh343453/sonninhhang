@@ -1,4 +1,4 @@
-﻿@import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
 
 html {
     font-size: 62.5%;
@@ -28,7 +28,7 @@ body {
 
 ::selection {
     color: #fff;
-    background-color: #c96
+    background-color: #c96;
 }
 
 p {
@@ -2389,7 +2389,7 @@ blockquote.text-white cite span {
 
 .category-dropdown.show .dropdown-toggle {
     color: #fff;
-    background-color: #c96
+    background-color: #af4719;
 }
 
 .category-dropdown.show .dropdown-toggle:after {
@@ -3575,7 +3575,7 @@ p {
 }
 
 .header-4 .dropdown.category-dropdown .dropdown-toggle:not(:hover):not(:focus) {
-    color: #333 !important
+    color: #333 !important;
 }
 
 @media screen and (min-width: 992px) {
@@ -5685,7 +5685,6 @@ p {
 }
 
 .footer a {
-    color: inherit
 }
 
 .footer a:hover,

@@ -4,14 +4,14 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Show Game</h2>
+                <h2> Show Food</h2>
             </div>
         </div>
     </div>
     <div class="card-wrapper">
-        
+
         <div class="card">
-            
+
             <!-- card left -->
             <div class="product-imgs">
                 <div class="img-display">
@@ -46,7 +46,7 @@
                 <h2>about this item: </h2>
                 <p> {{ $product->description }}</p>
                 <ul>
-                    <li>Publisher: <span> {{ $product->publisher->name }}</span></li>
+                    <li>Country: <span> {{ $product->publisher->name }}</span></li>
                 </ul>
             </div>
 
@@ -56,7 +56,7 @@
                         class="btn btn-primary btn-block text-center" role="button">Add to cart</a> </p>
 
             </div>
-          
+
             <div class="social-links">
                 <p>Share: </p>
                 <a href="#">

@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-shop-game',
         'version' => 'dev-shop-game',
-        'reference' => '1de42a1239ba4885367dcabe77af11285228ed90',
+        'reference' => '647cbf899fbc15fe6e1a50b1455a9a8283439dba',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -385,7 +385,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-shop-game',
             'version' => 'dev-shop-game',
-            'reference' => '1de42a1239ba4885367dcabe77af11285228ed90',
+            'reference' => '647cbf899fbc15fe6e1a50b1455a9a8283439dba',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

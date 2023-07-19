@@ -7,7 +7,7 @@
 
             <div class="pull-left">
 
-                <h2> Show Game</h2>
+                <h2> Show Food</h2>
 
             </div>
 
@@ -41,7 +41,7 @@
             <div class="form-group">
 
                 <strong>Image:</strong>
-               
+
                 @foreach ($product->image as $image)
                     <img src="{{ asset('image/product/' . $image->image) }}" alt="" style="margin: 15px" height=150
                         width=250>

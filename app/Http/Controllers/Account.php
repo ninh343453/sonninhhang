@@ -61,10 +61,12 @@ class Account extends Controller
             if ($user->role_id == 1) {
                 $request->session()->put('user', Auth::user());
                 return redirect()->intended('/admin/home');
+
             } elseif ($user->role_id == 2) {
                 // Xử lý cho role 2
                 $request->session()->put('user', Auth::user());
                 return redirect()->intended('/game/home');
+
             } elseif ($user->role_id == 3) {
                 $request->session()->put('user', Auth::user());
                 return redirect()->intended('/admin/home');
@@ -187,5 +189,5 @@ class Account extends Controller
 
             ->with('i', (request()->input('page', 1) - 1) * 20);
     }
-    
+
 }

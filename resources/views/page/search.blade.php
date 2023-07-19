@@ -1,7 +1,7 @@
 @include('product.layout')
 @extends('clien.layout.index')
 @section('content')
-    <h2 class="list-product-title">NEW Game</h2>
+    <h2 class="list-product-title">NEW FOOD</h2>
 
     <div class="list-product-subtitle">
         @if (session('success'))
@@ -16,7 +16,7 @@
             <div class="row">
 
 
-                
+
                     @foreach ($searchs as $search)
                         <div class="col-xs-18 col-sm-6 col-md-4" style="margin-top:10px;">
                             <div class="img_thumbnail productlist">

@@ -8,7 +8,7 @@
 
             <div class="pull-left">
 
-                <h2>Edit Profile Game</h2>
+                <h2>Edit Profile Food</h2>
 
             </div>
 
@@ -58,7 +58,7 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Publisher:</strong>
+                    <strong>Country:</strong>
 
                     <select name="publisher" class="form-control">
 

@@ -8,7 +8,7 @@
             </button>
 
             <a href="{{ route('product.home') }}" class="logo">
-                <img src="https://www.creativosonline.org/wp-content/uploads/2022/11/gamer-logo.png" alt="ShopGame Logo"
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtIh6GQVuefdBhQVqXFu3nXmev0pkFP6zewg&usqp=CAU" alt="ShopGame Logo"
                     width="100" height="100" style="border-radius:100px ">
             </a>
         </div><!-- End .header-left -->
@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
                                     <p>{{ $details['product_name'] ?? '' }}</p>
-                                    <span class="price text-info"> ${{ $details['price'] ?? 0 }}</span> 
+                                    <span class="price text-info"> ${{ $details['price'] ?? 0 }}</span>
                                     <span class="count">Quantity:{{ $details['quantity'] ?? 0 }}</span>
                                 </div>
                             </div>
@@ -91,7 +91,7 @@
 
                         </a>
                     </div>
-                    
+
             </div>
 
 

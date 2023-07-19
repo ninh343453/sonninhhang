@@ -4,11 +4,11 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Game Management</h2>
+                <h2>Food Management</h2>
             </div>
             <br><br>
             <div class="pull-left">
-                <a class="btn btn-success" href="{{ route('product.create') }}"> Add New Game</a>
+                <a class="btn btn-success" href="{{ route('product.create') }}"> Add New Food</a>
             </div>
         </div>
     </div>
@@ -21,14 +21,14 @@
         <tr>
             <th>No</th>
             <th>Name</th>
-            <th>Publisher</th>
+            <th>Country</th>
             <th>Image</th>
             <th>Price</th>
             <th>Details</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($products as $key => $product)
-        
+
             <tr>
                 <td>{{ $key + 1 }}</td>
                 <td>{{ $product->name }}</td>
@@ -52,6 +52,6 @@
                 </td>
             </tr>
         @endforeach
-        
+
     </table>
 @endsection

@@ -30,13 +30,13 @@
             <div class="row">
                 <div class="col-sm-6 col-lg-3">
                     <div class="widget widget-about">
-                        <img src="https://vn-test-11.slatic.net/shop/8b6ebc3d3b65f37e9fe71cec5389912c.png" class="footer-logo" alt="Footer Logo"
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtIh6GQVuefdBhQVqXFu3nXmev0pkFP6zewg&usqp=CAU" class="footer-logo" alt="Footer Logo"
                             width="105" height="25">
-                     
+
                         <div class="widget-call">
                             <i class="icon-phone"></i>
                             Got Question? Call us 24/7
-                            <a href="tel:#">0866091643</a>
+                            <a href="tel:#">0816439324</a>
                         </div><!-- End .widget-call -->
                     </div><!-- End .widget about-widget -->
                 </div><!-- End .col-sm-6 col-lg-3 -->
@@ -46,9 +46,9 @@
                         <h4 class="widget-title">Useful Links</h4><!-- End .widget-title -->
 
                         <ul class="widget-list">
-                            <li><a href="about.html">About Shopgame</a></li>
+                            <li><a href="about.html">About Shopfood</a></li>
                             <li><a href="#">Our Services</a></li>
-                            <li><a href="#">How to shop on Shopgame</a></li>
+                            <li><a href="#">How to shop on Shopfood</a></li>
                             <li><a href="faq.html">FAQ</a></li>
                             <li><a href="contact.html">Contact us</a></li>
                         </ul><!-- End .widget-list -->
@@ -89,7 +89,7 @@
 
     <div class="footer-bottom">
         <div class="container">
-            <p class="footer-copyright">Copyright © 2023 Music Store. All Rights Reserved.</p>
+            {{-- <p class="footer-copyright">Copyright © 2023 Music Store. All Rights Reserved.</p> --}}
             <!-- End .footer-copyright -->
             <figure class="footer-payments">
                 <img src="{{ asset('assets/images/payments.png') }}" alt="Payment methods" width="272"

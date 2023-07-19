@@ -7,7 +7,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="{{ route('product.home') }}" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -39,15 +39,15 @@
       </li>
 
       <!-- Messages Dropdown Menu -->
-     
+
       <!-- Notifications Dropdown Menu -->
       <li class="nav-profile dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="fa fa-user" aria-hidden="true"></i>
-          
+
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          
+
           <div class="dropdown-divider"></div>
           <a href="{{route('dashboard')}}" class="dropdown-item">
             <i class="fa fa-user" aria-hidden="true"></i> MyProfile
@@ -55,9 +55,9 @@
           <div class="dropdown-divider"></div>
           <a href="{{route('logout')}}" class="dropdown-item">
             <i class='fas fa-sign-out-alt'></i> Logout
-            
+
           </a>
-   
+
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>

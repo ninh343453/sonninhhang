@@ -3,7 +3,7 @@
 
 <style>
     body {
-        background-image: url('1303457.jpg');
+        background-image: url('https://cagd.ask.fm/49f/e3da1/f6e2/4fde/ab67/b216ff075735/animated/1360997.gif');
     }
 
     .register {
@@ -128,7 +128,7 @@
 
         padding: 2%;
 
-        background: #0062cc;
+        background: #af4719;
 
         color: #fff;
 
@@ -221,7 +221,7 @@
 
         <div class="col-md-3 register-left">
 
-            <img src="https://static.vecteezy.com/system/resources/previews/015/370/017/original/gaming-console-illustration-isolated-on-transparent-background-free-png.png"
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtIh6GQVuefdBhQVqXFu3nXmev0pkFP6zewg&usqp=CAU"
                 alt="" />
 
             <h3>Welcome</h3><br><br><br>

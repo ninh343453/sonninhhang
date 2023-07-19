@@ -1,7 +1,7 @@
 @include('product.layout')
 @extends('clien.layout.index')
 @section('content')
-    <h2 class="list-product-title">NEW Game</h2>
+    <h2 class="list-product-title">NEW FOOD</h2>
 
     <div class="list-product-subtitle">
         @if (session('success'))
@@ -10,7 +10,7 @@
             </div>
         @endif
 
-        <p>List Game New</p>
+        <p>List New Food</p>
 
         <div class="product-group">
 
@@ -29,7 +29,7 @@
                                        <a href="#"> {{ $category->name }}</a>
                                     @endforeach
                                 <p><strong>Price: </strong> ${{ $product->price }}</p>
-                                
+
                                 <p class="purchase-info"><a href="{{ route('home.show', $product->id) }}"
                                         class="btn btn-primary btn-block text-center" role="button">View Detail</a> </p>
                             </div>

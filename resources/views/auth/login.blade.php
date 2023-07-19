@@ -14,7 +14,7 @@
     html,
     body {
 
-        background-image: url('1303457.jpg');
+        background-image: url('https://cagd.ask.fm/49f/e3da1/f6e2/4fde/ab67/b216ff075735/animated/1360997.gif');
 
         background-size: cover;
 
@@ -44,7 +44,7 @@
 
         width: 400px;
 
-        background-color: rgba(0, 0, 0, 0.5) !important;
+        background-color:#fff(0, 0, 0, 0.5) !important;
 
     }
 
@@ -54,13 +54,13 @@
 
         margin-left: 10px;
 
-        color: #1289ff;
+        color: #af4719;
 
     }
 
     .social_icon span:hover {
 
-        color: white;
+        color: black;
 
         cursor: pointer;
 
@@ -68,7 +68,7 @@
 
     .card-header h3 {
 
-        color: white;
+        color: black;
 
     }
 
@@ -86,7 +86,7 @@
 
         width: 50px;
 
-        background-color: #126dff;
+        background-color:#af4719;
 
         color: black;
 
@@ -104,7 +104,7 @@
 
     .remember {
 
-        color: white;
+        color: black;
 
     }
 
@@ -124,7 +124,7 @@
 
         color: black;
 
-        background-color: #2849d7cf;
+        background-color:#af4719;;
 
         width: 100px;
 
@@ -140,7 +140,7 @@
 
     .links {
 
-        color: white;
+        color: black;
 
     }
 
@@ -220,9 +220,9 @@
                 </div>
                 <div class="card-footer">
                     <div class="d-flex justify-content-center links">
-                        Don't have an account?<a href="{{ route('welcome.register') }}">Sign Up</a>
+                        Don't have an account?<a href="{{ route('welcome.register') }}" style="color: #af4719">Sign Up</a>
                     </div>
-                    
+
                 </div>
 
             </div>
