@@ -93,7 +93,7 @@ class ProductController extends Controller
 
             return redirect()->route('product.index')
 
-                ->with('success', 'Game Add successfully.');
+                ->with('success', 'Food Add successfully.');
         }
 
     }
@@ -166,10 +166,10 @@ class ProductController extends Controller
                 }
 
                 return redirect()->route('product.index')
-                    ->with('success', 'Game updated successfully');
+                    ->with('success', 'Food43 updated successfully');
             } else {
                 return redirect()->route('product.index')
-                    ->with('Error', 'Game not update');
+                    ->with('Error', 'Food not update');
 
             }
         }
@@ -183,7 +183,7 @@ class ProductController extends Controller
 
         return redirect()->route('product.index')
 
-            ->with('success', 'Game deleted successfully');
+            ->with('success', 'Food deleted successfully');
     }
 
 }

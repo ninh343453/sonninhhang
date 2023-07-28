@@ -226,7 +226,7 @@
 
             <h3>Welcome</h3><br><br><br>
 
-            <a class="btn btn-success" href="{{ route('welcome.login') }}"> Login</a><br />
+          
 
         </div>
 
@@ -318,6 +318,8 @@
                                 </div>
 
                                 <input type="submit" class="btnRegister" value="Register" />
+                                
+                                <a class="btnRegister" href="{{ route('welcome.login') }}"> Login</a><br />
 
                             </form>
 
