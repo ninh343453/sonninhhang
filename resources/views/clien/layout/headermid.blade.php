@@ -8,8 +8,8 @@
             </button>
 
             <a href="{{ route('product.home') }}" class="logo">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtIh6GQVuefdBhQVqXFu3nXmev0pkFP6zewg&usqp=CAU" alt="ShopGame Logo"
-                    width="100" height="100" style="border-radius:100px ">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtIh6GQVuefdBhQVqXFu3nXmev0pkFP6zewg&usqp=CAU"
+                    alt="ShopGame Logo" width="100" height="100" style="border-radius:100px ">
             </a>
         </div><!-- End .header-left -->
 
@@ -36,8 +36,8 @@
                 <div class="dropdown-menu">
                     <div class="row total-header-section">
                         @php $total = 0; @endphp
-                        @if(session('cart'))
-                            @foreach(session('cart') as $id => $details)
+                        @if (session('cart'))
+                            @foreach (session('cart') as $id => $details)
                                 @php
                                     $price = isset($details['price']) ? $details['price'] : 0;
                                     $quantity = isset($details['quantity']) ? $details['quantity'] : 0;
@@ -50,8 +50,8 @@
                             <p>Total: <span class="text-info">$ {{ $total }}</span></p>
                         </div>
                     </div>
-                    @if(session('cart'))
-                        @foreach(session('cart') as $id => $details)
+                    @if (session('cart'))
+                        @foreach (session('cart') as $id => $details)
                             <div class="row cart-detail">
                                 <div class="col-lg-3 col-sm-3 col-3 cart-detail-img">
                                     <!-- Hiển thị hình ảnh sản phẩm -->
@@ -91,10 +91,8 @@
 
                         </a>
                     </div>
-
+                </li>
             </div>
-
-
         </div><!-- End .header-right -->
     </div><!-- End .container -->
 </div><!-- End .header-middle -->

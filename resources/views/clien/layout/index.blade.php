@@ -20,5 +20,7 @@
         </div>
         @include('clien.layout.footer')
     </div>
+    @include('clien.layout.menumobile')
     @include('clien.layout.js')
+    
 </body>

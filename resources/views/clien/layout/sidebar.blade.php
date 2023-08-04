@@ -29,29 +29,33 @@
                 <ul class="menu sf-arrows">
                     <li class="megamenu-container active">
                         <a href="http://127.0.0.1:8000/game/home" class="">Home</a>
+                    </li>
                     <li>
                         <a href="#">Shop</a>
+                    </li>
                     <li>
                         <a href="#" class="">Product</a>
+                    </li>
                     <li>
                         <a href="#" class="">Pages</a>
+                    </li>
                     <li>
                         <a href="#">Blog</a>
+                    </li>
                     <li>
                         <a href="#">Elements</a>
                     </li>
-                    @if (auth()->user()->role_id == 3 || auth()->user()->role_id == 1)
 
+                    @if (auth()->user()->role_id == 3 || auth()->user()->role_id == 1)
                         <li>
                             <a href="{{ route('admin.home') }}">Manager</a>
                         </li>
 
                         </li>
                     @endif
-
+                </ul>
             </nav><!-- End .main-nav -->
         </div><!-- End .header-center -->
-
-
     </div><!-- End .container -->
 </div><!-- End .header-bottom -->
+<\
