@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
-        'pretty_version' => 'dev-shop-game',
-        'version' => 'dev-shop-game',
-        'reference' => '647cbf899fbc15fe6e1a50b1455a9a8283439dba',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '1542b63217594a5a2241e88c6695c4c1ea330ac8',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -383,9 +383,9 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => 'dev-shop-game',
-            'version' => 'dev-shop-game',
-            'reference' => '647cbf899fbc15fe6e1a50b1455a9a8283439dba',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '1542b63217594a5a2241e88c6695c4c1ea330ac8',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
