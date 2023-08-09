@@ -16,6 +16,8 @@
                 width: 277px;
                 height: 277px;
                 object-fit: cover;
+                aspect-ratio: 1/1;
+                /* Tạo tỷ lệ khung hình vuông */
             }
         </style>
 
