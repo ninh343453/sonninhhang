@@ -65,7 +65,7 @@
         @else
             <a href="{{ $categories->previousPageUrl() }}" rel="prev">&laquo;</a>
         @endif
-    
+
         @if ($categories->hasMorePages())
             <a href="{{ $categories->nextPageUrl() }}" rel="next">&raquo;</a>
         @else

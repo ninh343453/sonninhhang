@@ -10,10 +10,10 @@
             </div>
         @endif
         @if ($searchs->isNotEmpty())
-        <h4>Search : <strong>{{ $_GET['query'] }}</strong></h4>
-        <div class="product-group">
+            <h4>Search : <strong>{{ $_GET['query'] }}</strong></h4>
+            <div class="product-group">
 
-            <div class="row">
+                <div class="row">
 
 
 
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                     @endforeach
-                @endif
-            </div>
-        </div>
-    @endsection
+        @endif
+    </div>
+    </div>
+@endsection

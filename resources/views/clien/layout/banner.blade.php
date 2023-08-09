@@ -39,7 +39,8 @@
                 </div><!-- End .intro-content -->
             </div><!-- End .intro-slide -->
 
-            <div class="intro-slide" style="background-image: url(https://media.ohay.tv/v1/upload/content/2019-03/31/35624-1554041197-oh2-ohaytv.gif);">
+            <div class="intro-slide"
+                style="background-image: url(https://media.ohay.tv/v1/upload/content/2019-03/31/35624-1554041197-oh2-ohaytv.gif);">
                 <div class="container intro-content">
                     <div class="row justify-content-end">
                         <div class="col-auto col-sm-7 col-md-6 col-lg-5">

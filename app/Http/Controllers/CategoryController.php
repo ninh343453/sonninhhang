@@ -25,7 +25,6 @@ class CategoryController extends Controller
     {
 
         return view('category.create');
-
     }
 
     public function store(Request $request)
@@ -48,7 +47,6 @@ class CategoryController extends Controller
                     ->withErrors($validator)
 
                     ->withInput();
-
             }
 
             $newCategory = new Category();
@@ -62,9 +60,7 @@ class CategoryController extends Controller
             return redirect()->route('category.index')
 
                 ->with('success', 'Category created successfully.');
-
         }
-
     }
 
     public function show($id)
@@ -73,7 +69,6 @@ class CategoryController extends Controller
         $category = Category::find($id);
 
         return view('admin.category.show', ['category' => $category]);
-
     }
 
     public function edit($id)
@@ -82,7 +77,6 @@ class CategoryController extends Controller
         $category = Category::find($id);
 
         return view('admin.category.edit', ['category' => $category]);
-
     }
 
     public function update(Request $request, $id)
@@ -99,7 +93,6 @@ class CategoryController extends Controller
                     ->withErrors($validator)
 
                     ->withInput();
-
             }
 
             $category = Category::find($id);
@@ -113,11 +106,8 @@ class CategoryController extends Controller
             } else {
                 return redirect()->route('category.index')
                     ->with('Error', 'Category not update');
-
             }
-
         }
-
     }
 
     public function destroy($id)
@@ -130,7 +120,5 @@ class CategoryController extends Controller
         return redirect()->route('category.index')
 
             ->with('success', 'Category deleted successfully');
-
     }
-
 }

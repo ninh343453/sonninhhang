@@ -41,7 +41,6 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         if ($request->isMethod('POST')) {
-
             $validator = Validator::make($request->all(), [
                 'name' => 'required',
                 'price' => 'required',
@@ -50,53 +49,45 @@ class ProductController extends Controller
             ]);
 
             if ($validator->fails()) {
-
                 return redirect()->back()
-
                     ->withErrors($validator)
-
                     ->withInput();
-
             }
 
-
-            if ($request->hasfile('image')) {
-                $Product_Images = [];
-                $images = $request->file('image');
-                foreach ($images as $image) {
-                    $path = public_path('image/product');
-                    $image_name = time() . '_' . $image->getClientOriginalName();
-                    $image->move($path, $image_name);
-                    $Product_Images[] = $image_name;
-                }
-            } else {
-                $image_name = 'noname.jpg';
-            }
-
-
+            // Tạo mới sản phẩm và lưu thông tin sản phẩm vào cơ sở dữ liệu
             $newProduct = new Product();
             $newProduct->name = $request->name;
             $newProduct->price = $request->price;
             $newProduct->description = $request->description;
             $newProduct->publisher_id = $request->publisher;
-
-
             $newProduct->save();
-            $newProduct->category()->attach($request->input('categories'));
-            $lastInserttedID = $newProduct->id;
-            foreach ($Product_Images as $image) {
-                $newProductImage = new Image();
-                $newProductImage->image = $image;
-                $newProductImage->product_id = $lastInserttedID;
-                $newProductImage->save();
+
+            // Lưu các hình ảnh liên quan đến sản phẩm vào cơ sở dữ liệu
+            if ($request->hasfile('image')) {
+                $productImages = [];
+                $images = $request->file('image');
+                foreach ($images as $image) {
+                    $path = public_path('image/product');
+                    $image_name = time() . '_' . $image->getClientOriginalName();
+                    $image->move($path, $image_name);
+                    $productImages[] = $image_name;
+
+                    // Tạo mới đối tượng Image và lưu thông tin hình ảnh vào cơ sở dữ liệu
+                    $newProductImage = new Image();
+                    $newProductImage->image = $image_name;
+                    $newProductImage->product()->associate($newProduct);
+                    $newProductImage->save();
+                }
+            } else {
+                $image_name = 'noname.jpg';
             }
 
+            // Thực hiện chuyển hướng sau khi lưu thành công
             return redirect()->route('product.index')
-
-                ->with('success', 'Game Add successfully.');
+                ->with('success', 'Product added successfully.');
         }
-
     }
+
     public function show($id)
     {
         $product = Product::with('category')->findOrFail($id);
@@ -111,79 +102,105 @@ class ProductController extends Controller
         $categories = Category::all();
         return view('product.edit', ['product' => $product, 'publishers' => $publishers, 'categories' => $categories]);
     }
+
     public function update(Request $request, $id)
     {
-        if ($request->isMethod('POST')) {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'price' => 'required',
+            'description' => 'required',
+            'image.*' => 'image|mimes:jpg,jpeg,png|max:100000',
+        ]);
 
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
 
-            $validator = Validator::make($request->all(), [
-                'name' => 'required',
-                'price' => 'required',
-                'description' => 'required',
-                'image.*' => 'required|image|mimes:jpg,jpeg,png|max:100000',
+        // Find the existing product
+        $product = Product::findOrFail($id);
 
-            ]);
+        // Check if new images were uploaded
+        if ($request->hasfile('image')) {
+            $Product_Images = [];
 
-            if ($validator->fails()) {
-
-                return redirect()->back()
-                    ->withErrors($validator)
-                    ->withInput();
+            // Remove existing images from the server
+            foreach ($product->image as $image) {
+                $imagePath = public_path('image/product') . '/' . $image->image;
+                if (file_exists($imagePath)) {
+                    unlink($imagePath);
+                }
             }
 
-            if ($request->hasfile('image')) {
-                $Product_Images = [];
-                $images = $request->file('image');
-                foreach ($images as $image) {
-
-                    $path = public_path('image/product');
-                    $image_name = time() . '_' . $image->getClientOriginalName();
-                    $image->move($path, $image_name);
-                    $Product_Images[] = $image_name;
-                }
-            } else {
-                $Product_Images[] = 'noname.jpg';
+            $images = $request->file('image');
+            foreach ($images as $image) {
+                $path = public_path('image/product');
+                $image_name = time() . '_' . $image->getClientOriginalName();
+                $image->move($path, $image_name);
+                $Product_Images[] = $image_name;
             }
+        } else {
+            // No new images uploaded, retain the existing images
+            $Product_Images = $product->images->pluck('image')->toArray();
+        }
 
-            $product = Product::find($id);
-            if ($product != null) {
+        // Update the product attributes
+        $product->name = $request->name;
+        $product->price = $request->price;
+        $product->description = $request->description;
+        $product->publisher_id = $request->publisher;
+        $product->save();
 
-                $product->name = $request->name;
-                $product->price = $request->price;
-                $product->description = $request->description;
-                $product->publisher_id = $request->publisher;
-                $product->save();
-                
-                $product->category()->sync($request->input('categories'));
-                Image::where('product_id', $id)->delete();
+        // Update the product categories (assuming the relationship is defined properly)
+        $product->category()->sync($request->input('categories'));
 
-                // Save new images for the product
-                foreach ($Product_Images as $image) {
-                    $productImage = new Image();
-                    $productImage->image = $image;
-                    $productImage->product_id = $id;
-                    $productImage->save();
-                }
-
-                return redirect()->route('product.index')
-                    ->with('success', 'Game updated successfully');
-            } else {
-                return redirect()->route('product.index')
-                    ->with('Error', 'Game not update');
-
+        // Update the product images
+        if ($request->hasfile('image')) {
+            $product->image()->delete(); // Delete existing images from the database
+            foreach ($Product_Images as $image) {
+                $newProductImage = new Image();
+                $newProductImage->image = $image;
+                $newProductImage->product_id = $product->id;
+                $newProductImage->save();
             }
         }
+
+        return redirect()->route('product.index')
+            ->with('success', 'Product updated successfully.');
     }
+
+
+
+
+
 
     public function destroy($id)
     {
+        // Find the existing product
         $product = Product::find($id);
-        Image::where('product_id', $id)->delete();
+
+        if (!$product) {
+            return redirect()->route('product.index')
+                ->with('error', 'Product not found.');
+        }
+
+        // Detach the product from all categories in the pivot table
+        $product->category()->detach();
+
+        // Delete the images related to the product from the server and the database
+        foreach ($product->image as $image) {
+            $imagePath = public_path('image/product') . '/' . $image->image;
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+            $image->delete();
+        }
+
+        // Now you can safely delete the product
         $product->delete();
 
         return redirect()->route('product.index')
-
-            ->with('success', 'Game deleted successfully');
+            ->with('success', 'Product deleted successfully');
     }
-
 }

@@ -28,7 +28,7 @@
             <nav class="main-nav">
                 <ul class="menu sf-arrows">
                     <li class="megamenu-container active">
-                        <a href="http://127.0.0.1:8000/game/home" class="">Home</a>
+                        <a href="http://127.0.0.1:8000/food/home" class="">Home</a>
                     <li>
                         <a href="#">Shop</a>
                     <li>
@@ -41,7 +41,6 @@
                         <a href="#">Elements</a>
                     </li>
                     @if (auth()->user()->role_id == 3 || auth()->user()->role_id == 1)
-
                         <li>
                             <a href="{{ route('admin.home') }}">Manager</a>
                         </li>

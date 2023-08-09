@@ -1,7 +1,5 @@
-
 <footer class="footer">
-    <div class="cta bg-image bg-dark pt-4 pb-5 mb-0"
-        style="background-image: url(assets/images/demos/demo-4/bg-5.jpg);">
+    <div class="cta bg-image bg-dark pt-4 pb-5 mb-0" style="background-image: url(assets/images/demos/demo-4/bg-5.jpg);">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-10 col-md-8 col-lg-6">
@@ -30,8 +28,8 @@
             <div class="row">
                 <div class="col-sm-6 col-lg-3">
                     <div class="widget widget-about">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtIh6GQVuefdBhQVqXFu3nXmev0pkFP6zewg&usqp=CAU" class="footer-logo" alt="Footer Logo"
-                            width="105" height="25">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtIh6GQVuefdBhQVqXFu3nXmev0pkFP6zewg&usqp=CAU"
+                            class="footer-logo" alt="Footer Logo" width="105" height="25">
 
                         <div class="widget-call">
                             <i class="icon-phone"></i>

@@ -15,13 +15,12 @@ return new class extends Migration
     {
         Schema::create('product', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name',255) ->nullable();
+            $table->string('name', 255)->nullable();
             $table->string('description');
-            $table->decimal('price',22) ->nullable() ->default(0.00);
+            $table->decimal('price', 22)->nullable()->default(0.00);
             $table->unsignedInteger('publisher_id');
             $table->foreign('publisher_id')->references('id')->on('publisher');
             $table->timestamps();
-           
         });
     }
 

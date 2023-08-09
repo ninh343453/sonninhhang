@@ -1,8 +1,8 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtIh6GQVuefdBhQVqXFu3nXmev0pkFP6zewg&usqp=CAU" alt="AdminLTE Logo"
-            class="brand-image img-circle elevation-3" width="50px" height="50px">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtIh6GQVuefdBhQVqXFu3nXmev0pkFP6zewg&usqp=CAU"
+            alt="AdminLTE Logo" class="brand-image img-circle elevation-3" width="50px" height="50px">
         <span class="brand-text font-weight-light">Admin</span>
     </a>
 
@@ -12,8 +12,8 @@
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
                 <img title="Account" class="img-profile rounded-circle"
-                    src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" alt="" width="30px" height="30px"
-                    style="padding: 0px">
+                    src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg"
+                    alt="" width="30px" height="30px" style="padding: 0px">
             </div>
             <div class="info">
                 <a href="{{ route('dashboard') }}" class="d-block">
@@ -89,12 +89,12 @@
                             </a>
                         </li>
                         @if (auth()->user()->role_id == 3)
-                        <li class="nav-item">
-                            <a href="{{ route('welcome.index') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Manage Account</p>
-                            </a>
-                        </li>
+                            <li class="nav-item">
+                                <a href="{{ route('welcome.index') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Manage Account</p>
+                                </a>
+                            </li>
                         @endif
 
 

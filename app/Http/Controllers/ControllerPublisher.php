@@ -58,7 +58,6 @@ class ControllerPublisher extends Controller
                     ->withErrors($validator)
 
                     ->withInput();
-
             }
 
             $newPublisher = new Publisher();
@@ -72,8 +71,8 @@ class ControllerPublisher extends Controller
             return redirect()->route('publisher.index')
 
                 ->with('success', 'Publisher created successfully.');
+        }
     }
-}
 
     /**
      * Display the specified resource.
@@ -127,7 +126,6 @@ class ControllerPublisher extends Controller
                     ->withErrors($validator)
 
                     ->withInput();
-
             }
 
             $publisher = Publisher::find($id);
@@ -143,15 +141,12 @@ class ControllerPublisher extends Controller
                 return redirect()->route('publisher.index')
 
                     ->with('success', 'publisher updated successfully');
-
             } else {
 
                 return redirect()->route('publisher.index')
 
                     ->with('Error', 'Publisher not update');
-
             }
-
         }
     }
 

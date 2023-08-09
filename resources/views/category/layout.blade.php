@@ -5,7 +5,7 @@
 <head>
 
     <title>Manage Category</title>
-    
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet">
 
 </head>
@@ -23,7 +23,7 @@
         @else
             <a href="{{ $categories->previousPageUrl() }}" rel="prev">&laquo;</a>
         @endif
-    
+
         @if ($categories->hasMorePages())
             <a href="{{ $categories->nextPageUrl() }}" rel="next">&raquo;</a>
         @else

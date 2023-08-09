@@ -19,7 +19,7 @@
     @endif
     <table class="table table-bordered" ,border="0">
         <tr>
-            <th>No</th>
+            <th>ID</th>
             <th>Name</th>
             <th>Country</th>
             <th>Image</th>
@@ -27,16 +27,22 @@
             <th>Details</th>
             <th width="280px">Action</th>
         </tr>
-        @foreach ($products as $key => $product)
-
+        @foreach ($products as $product)
             <tr>
-                <td>{{ $key + 1 }}</td>
+                <td>{{ $product->id }}</td>
                 <td>{{ $product->name }}</td>
                 <td>{{ $product->publisher->name }}</td>
+                <td>
 
-                <td><img class="images-detail" src="{{ asset('image/product/' . $product->image[0]->image) }}" alt=""
-                        height=150 width=150>
+                    @if (isset($product->image) && count($product->image) > 0)
+                        <img class="images-detail" src="{{ asset('image/product/' . $product->image[0]->image) }}"
+                            alt="" height=150 width=150>
+                    @else
+                        <img class="images-detail" src="{{ asset('image/default.jpg') }}" alt="" height=150
+                            width=150>
+                    @endif
                 </td>
+
 
                 <td>{{ $product->price }} $</td>
 

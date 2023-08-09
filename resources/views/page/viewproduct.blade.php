@@ -17,7 +17,8 @@
                 <div class="img-display">
                     <div class="img-showcase">
                         @foreach ($product->image as $image)
-                            <img src="{{ asset('image/product/' . $image->image) }}" alt="" width="150px" height="300px">
+                            <img src="{{ asset('image/product/' . $image->image) }}" alt="" width="150px"
+                                height="300px">
                         @endforeach
                     </div>
                 </div>

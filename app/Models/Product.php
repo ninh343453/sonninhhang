@@ -8,39 +8,35 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
-    public $table='product';
-    protected $primarykey ='id';
-   
-    protected $fillable= [
-        'name','price','description','publisher_id'
-    ]   ;
-    public function publisher(){
-        return $this->belongsTo('App\Models\Publisher','publisher_id');
-    }
-    public function _category_product(){
-        return $this->hasMany('App\Models\CategoryProduct');
+    public $table = 'product';
+    protected $primarykey = 'id';
 
+    protected $fillable = [
+        'name', 'price', 'description', 'publisher_id'
+    ];
+    public function publisher()
+    {
+        return $this->belongsTo('App\Models\Publisher', 'publisher_id');
     }
-    public function image(){
-        return $this->hasMany('App\Models\Image');
-
+    public function image()
+    {
+        return $this->hasMany(Image::class, 'product_id', 'id');
     }
-    public function _cart_product(){
+    public function _cart_product()
+    {
         return $this->hasMany('App\Models\CartProduct');
-
-
     }
     public function category()
     {
-        return $this->belongsToMany(Category::class);
+        return $this->belongsToMany(Category::class, 'category_product', 'product_id', 'category_id');
     }
-    public function _order_product(){
+
+    public function _order_product()
+    {
         return $this->hasMany('App\Models\OrderProduct');
-
     }
-    public function _review(){
+    public function _review()
+    {
         return $this->hasMany('App\Models\Review');
-
     }
-
 }

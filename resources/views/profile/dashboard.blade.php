@@ -9,7 +9,7 @@
             <p>Email: {{ $user->email }}</p>
             <p>Country: {{ $user->country }}</p>
             <p>Phone Number: 0{{ $user->numberphone }}</p>
-            
+
 
         </div>
     </div>

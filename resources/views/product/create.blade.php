@@ -22,7 +22,7 @@
 
             <div class="pull-left">
 
-                <h2>Add New Game</h2>
+                <h2>Add New Food</h2>
 
             </div>
 

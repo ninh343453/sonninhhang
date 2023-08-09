@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Game Management</h2>
+                <h2>Food Management</h2>
             </div>
             <br><br>
 
@@ -17,7 +17,7 @@
     @endif
     <table class="table table-bordered" ,border="0">
         <tr>
-            <th>No</th>
+            <th>ID</th>
             <th>Name</th>
             <th>Country</th>
             <th>Email</th>

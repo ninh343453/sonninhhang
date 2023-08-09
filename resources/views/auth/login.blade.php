@@ -44,7 +44,7 @@
 
         width: 400px;
 
-        background-color:#fff(0, 0, 0, 0.5) !important;
+        background-color: #fff(0, 0, 0, 0.5) !important;
 
     }
 
@@ -86,7 +86,7 @@
 
         width: 50px;
 
-        background-color:#af4719;
+        background-color: #af4719;
 
         color: black;
 
@@ -124,7 +124,8 @@
 
         color: black;
 
-        background-color:#af4719;;
+        background-color: #af4719;
+        ;
 
         width: 100px;
 
@@ -173,7 +174,7 @@
 
     <!--Custom styles-->
 
-    <link rel="stylesheet" type="text/css" href="{{asset("styles.css")}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('styles.css') }}">
 
 </head>
 
@@ -208,8 +209,8 @@
                             <input type="password" class="form-control" placeholder="Password" name="password">
                         </div>
                         @if (session('error'))
-                        <div class="text-danger">{{ session('error') }}</div>
-                    @endif
+                            <div class="text-danger">{{ session('error') }}</div>
+                        @endif
                         <div class="row align-items-center remember">
                             <input type="checkbox" name="remember">Remember Me
                         </div>
@@ -220,7 +221,8 @@
                 </div>
                 <div class="card-footer">
                     <div class="d-flex justify-content-center links">
-                        Don't have an account?<a href="{{ route('welcome.register') }}" style="color: #af4719">Sign Up</a>
+                        Don't have an account?<a href="{{ route('welcome.register') }}" style="color: #af4719">Sign
+                            Up</a>
                     </div>
 
                 </div>

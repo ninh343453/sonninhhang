@@ -5,7 +5,7 @@
     <!-- ======= Header ======= -->
     <div class="page-wrapper">
         <header class="header header-intro-clearance header-4">
-           
+
             @include('clien.layout.headermid')
             @include('clien.layout.sidebar')
         </header>
@@ -14,7 +14,7 @@
         <div class="container new-arrivals">
             <div class="heading heading-flex mb-3">
                 <div class="heading-left">
-        @yield('content')
+                    @yield('content')
                 </div>
             </div>
         </div>
