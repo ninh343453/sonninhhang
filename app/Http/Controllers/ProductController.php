@@ -179,6 +179,7 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         Image::where('product_id', $id)->delete();
+        CategoryProduct::where('product_id', $id)->delete();
         $product->delete();
 
         return redirect()->route('product.index')
