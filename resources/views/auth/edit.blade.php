@@ -8,7 +8,7 @@
 
             <div class="pull-left">
 
-                <h2>Edit Profile Accout</h2>
+                <h2>Edit Profile Account</h2>
 
             </div>
 
@@ -46,7 +46,7 @@
 
                 <div class="form-group">
 
-                    <strong>Name:</strong>
+                    <strong>Name</strong>
 
                     <input type="text" name="name" class="form-control" placeholder="Name"
                         value="{{ $user->name }}">
