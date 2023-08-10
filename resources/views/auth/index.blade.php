@@ -17,7 +17,7 @@
     @endif
     <table class="table table-bordered" ,border="0">
         <tr>
-            <th>No</th>
+            <th>No.</th>
             <th>Name</th>
             <th>Country</th>
             <th>Email</th>
