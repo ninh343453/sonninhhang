@@ -79,7 +79,7 @@
                         <li class="nav-item">
                             <a href="{{ route('publisher.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Manage Publisher</p>
+                                <p>Manage Country</p>
                             </a>
                         </li>
                         <li class="nav-item">

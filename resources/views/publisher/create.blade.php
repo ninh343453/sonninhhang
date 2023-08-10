@@ -7,7 +7,7 @@
         <div class="col-lg-12 margin-tb">
 
             <div class="pull-left">
-                <h2>Add New Publisher</h2>
+                <h2>Add New Country</h2>
 
             </div>
             <div class="pull-right">

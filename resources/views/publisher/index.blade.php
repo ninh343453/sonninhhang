@@ -4,11 +4,11 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Publisher Management</h2>
+                <h2>Country Management</h2>
             </div>
         </div>
         <div class="pull-left">
-            <a class="btn btn-success" href="{{ route('publisher.create') }}"> Add New Publisher</a>
+            <a class="btn btn-success" href="{{ route('publisher.create') }}"> Add New Country</a>
         </div>
     </div>
     @if ($message = Session::get('success'))

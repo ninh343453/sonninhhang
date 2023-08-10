@@ -8,7 +8,7 @@
 
             <div class="pull-left">
 
-                <h2>Edit publisher</h2>
+                <h2>Edit Country</h2>
 
             </div>
 
