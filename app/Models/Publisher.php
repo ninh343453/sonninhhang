@@ -14,8 +14,8 @@ class Publisher extends Model
         'name','country'
     ]   ;
     public function product(){
-        return $this->hasMany('App\Models\Product');
+        return $this->hasMany(Product::class ,'publisher_id','id');
     }
-    
+
 
 }

@@ -88,7 +88,7 @@
                                 <p> Manage Category</p>
                             </a>
                         </li>
-                        @if (auth()->user()->role_id == 3)
+                        @if (auth()->user()->role_id == 1)
                             <li class="nav-item">
                                 <a href="{{ route('welcome.index') }}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>

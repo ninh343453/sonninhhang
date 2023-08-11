@@ -306,7 +306,7 @@
                                     <select class="form-control" name="role">
 
                                         @foreach ($roles as $role)
-                                            @if ($role->id !== 3)
+                                            @if ($role->id !== 1)
                                                 <option value="{{ $role->id }}">{{ $role->name }}</option>
                                             @endif
                                         @endforeach
