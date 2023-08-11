@@ -65,7 +65,7 @@ class Account extends Controller
             } elseif ($user->role_id == 2) {
                 // Xử lý cho role 2
                 $request->session()->put('user', Auth::user());
-                return redirect()->intended('/game/home');
+                return redirect()->intended('/food/home');
 
             } elseif ($user->role_id == 3) {
                 $request->session()->put('user', Auth::user());
@@ -190,4 +190,17 @@ class Account extends Controller
             ->with('i', (request()->input('page', 1) - 1) * 20);
     }
 
+
+
+    public function destroy($id)
+    {
+        // Find the existing product
+        $users = Users::find($id);
+
+
+        $users->delete();
+
+        return redirect()->route('welcome.index')
+            ->with('success', 'User deleted successfully');
+    }
 }
