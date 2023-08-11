@@ -224,8 +224,7 @@
                         Don't have an account?<a href="{{ route('welcome.register') }}" style="color: #af4719">Sign
                             Up</a>
                     </div>
-                    <link rel="stylesheet" href="asdawd">
-                    <i class="icon-mfg_icon"></i>
+
                 </div>
 
             </div>
