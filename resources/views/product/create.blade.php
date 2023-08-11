@@ -31,8 +31,7 @@
                 <a class="btn btn-primary" href="{{ route('product.index') }}"> Back</a>
 
             </div>
-            <p><a href="scas"></a></p>
-            <p><i class="ion-magnet"></i></p>
+
         </div>
 
     </div>
