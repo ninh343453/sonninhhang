@@ -16,7 +16,7 @@ class Product extends Model
     ];
     public function publisher()
     {
-        return $this->belongsTo(Publisher::class , 'id');
+        return $this->belongsTo('App\Models\Publisher', 'publisher_id');
     }
     public function image()
     {
