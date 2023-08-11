@@ -15,11 +15,12 @@ use Illuminate\Support\Facades\Session;
 
 class CartProductController extends Controller
 {
-
+// điều khiển để xử lý các yêu cầu
     public function cart()
     {
         return view('page.cart');
     }
+    // xác định các hành động với các tuyêns khác nhau
     public function addToCart($id)
     {
         $product = Product::findOrFail($id);

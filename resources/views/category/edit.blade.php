@@ -1,20 +1,8 @@
-@include('product.layout')
+@include('category.layout')
 @extends('admin.layout.index')
 <form role="form" action="" method="post">
 
     @csrf
-
-    <label>Name</label>
-
-    <input class="form-control" name="name" value="{{ $cate->name }}">
-
-    <label>Description</label>
-
-    <input class="form-control" name="description" value="{{ $cate->description }}">
-
-    <button type="submit" class="btn btn-success">Submit Button</button>
-
-    <button type="reset" class="btn btn-primary">Reset Button</button>
 
     @section('content')
 
@@ -30,7 +18,7 @@
 
                 <div class="pull-right">
 
-                    <a class="btn btn-primary" href="{{ route('product.index') }}"> Back</a>
+                    <a class="btn btn-primary" href="{{ route('category.index') }}"> Back</a>
 
                 </div>
 

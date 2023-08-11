@@ -6,14 +6,15 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Image;
-
+use App\Models\Users;
 class HomeController extends Controller
 {
     public function show($id)
     {
         $product = Product::find($id);
+        $user = Users::find($id);
 
-        return view('page.viewproduct', ['product' => $product]);
+        return view('page.viewproduct', ['product' => $product,'user' => $user ]);
     }
     public function search()
     {

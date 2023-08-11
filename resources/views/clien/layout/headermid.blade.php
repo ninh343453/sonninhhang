@@ -78,11 +78,12 @@
 
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-
-
+                        @auth
                         <a href="{{ route('dashboard') }}" class="dropdown-item">
-                            <i class="fa fa-user" aria-hidden="true"></i> MyProfile
+                            <i class="fa fa-user" aria-hidden="true"></i> {{ auth()->user()->name }}
                         </a>
+                        @endauth
+
                         <div class="dropdown-divider"></div>
                         <a href="{{ route('logout') }}" class="dropdown-item">
                             <i class='fas fa-sign-out-alt'></i> Logout

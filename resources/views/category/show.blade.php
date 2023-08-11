@@ -1,4 +1,4 @@
-@extends('admin.product.layout')
+@extends('category.layout')
 
 @section('content')
     <div class="row">
@@ -13,7 +13,7 @@
 
             <div class="pull-right">
 
-                <a class="btn btn-primary" href="{{ route('product.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('category.index') }}"> Back</a>
 
             </div>
 
@@ -29,7 +29,7 @@
 
                 <strong>Name:</strong>
 
-                {{ $category->category_name }}
+                {{ $category->name }}
 
             </div>
 
@@ -41,7 +41,7 @@
 
                 <strong>Details:</strong>
 
-                {{ $category->category_description }}
+                {{ $category->description }}
 
             </div>
 
